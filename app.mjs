@@ -1,10 +1,7 @@
-import dotenv from 'dotenv'
 import express from 'express'
 import connectDB from './config/db.mjs'
-import logger from './middleware/logger.mjs'
 import userRoutes from './routes/userRouter.mjs'
 import requestLogger from './middleware/requestLogger.mjs'
-dotenv.config()
 
 // Connect to database
 connectDB()
@@ -22,5 +19,4 @@ app.get('/', (req, res) => {
 
 app.use('/api/users', userRoutes)
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => logger.info(`Server started on port ${PORT}`))
+export default app
