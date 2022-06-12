@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import connectDB from './config/db.mjs'
-import logger from './utils/logger.js'
+import logger from './middleware/logger.mjs'
 import userRoutes from './routes/userRouter.mjs'
 import requestLogger from './middleware/requestLogger.mjs'
 dotenv.config()
