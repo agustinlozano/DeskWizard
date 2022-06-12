@@ -1,11 +1,11 @@
 {
   "name": "Desk Wizard",
   "version": "0.0.1",
-  "description": "",
-  "main": "server.mjs",
+  "description": "A MERN app to manage tickets.",
+  "main": "index.mjs",
   "scripts": {
-    "start": "node server.mjs",
-    "dev": "nodemon server.mjs"
+    "start": "node server/index.mjs",
+    "dev": "nodemon server/index.mjs"
   },
   "repository": {
     "type": "git",
