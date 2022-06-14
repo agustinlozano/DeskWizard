@@ -1,6 +1,7 @@
 import express from 'express'
 import connectDB from './config/db.mjs'
 import userRoutes from './routes/userRouter.mjs'
+import ticketRoutes from './routes/ticketRouter.mjs'
 import requestLogger from './middleware/requestLogger.mjs'
 
 // Connect to database
@@ -18,5 +19,6 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/users', userRoutes)
+app.use('/api/tickets/', ticketRoutes)
 
 export default app
