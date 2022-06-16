@@ -7,3 +7,5 @@ const server = http.createServer(app)
 
 const PORT = config.PORT || config.LOCAL
 server.listen(PORT, () => logger.info(`Server started on port ${PORT}`))
+
+export default server
