@@ -5,8 +5,11 @@
   "main": "index.mjs",
   "scripts": {
     "start": "node server/index.mjs",
-    "dev": "nodemon server/index.mjs"
+    "dev": "nodemon server/index.mjs",
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "npm run test -- --watch"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agustinlozano/help-desk.git"
@@ -27,9 +30,12 @@
     "mongoose": "6.3.6"
   },
   "devDependencies": {
+    "@types/jest": "^28.1.1",
     "cross-env": "7.0.3",
+    "jest": "28.1.1",
     "nodemon": "2.0.16",
-    "standard": "17.0.0"
+    "standard": "17.0.0",
+    "supertest": "6.2.3"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json",
