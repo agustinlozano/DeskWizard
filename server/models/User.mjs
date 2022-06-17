@@ -4,10 +4,13 @@ const userSchema = mongoose.Schema(
   {
     name: {
       type: String,
+      minlength: 2,
       required: [true, 'Please add a name']
     },
     username: {
       type: String,
+      minlength: 2,
+      unique: true,
       required: [true, 'Please add a username']
     },
     email: {
