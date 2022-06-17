@@ -3,6 +3,7 @@ import connectDB from './config/db.mjs'
 import userRoutes from './routes/userRouter.mjs'
 import ticketRoutes from './routes/ticketRouter.mjs'
 import requestLogger from './middleware/requestLogger.mjs'
+import { handleErrors, notFound } from './middleware/errors.mjs'
 
 // Connect to database
 connectDB()
@@ -20,5 +21,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/users', userRoutes)
 app.use('/api/tickets/', ticketRoutes)
+
+app.use(notFound)
+app.use(handleErrors)
 
 export default app
