@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import server from '../index.mjs'
 import User from '../models/User.mjs'
 import { api } from './helper.mjs'
+import getAnUserToken from './user_helper.mjs'
 
 beforeEach(async () => {
   await User.deleteMany({})
@@ -95,7 +96,7 @@ describe('POST /api/users/login', () => {
       .send(newUser)
   })
 
-  test('an existig user can be logged', async () => {
+  test('an existing user can be logged', async () => {
     const userData = {
       email: newUser.email,
       password: newUser.password
@@ -116,6 +117,26 @@ describe('POST /api/users/login', () => {
     await api
       .post('/api/users/login')
       .send(unknownData)
+      .expect(401)
+  })
+})
+
+describe('GET /api/users/me', () => {
+  test('a logged user can access their info passing a token', async () => {
+    const token = await getAnUserToken()
+
+    await api
+      .get('/api/users/me')
+      .set('Authorization', 'Bearer ' + token)
+      .expect(200)
+  })
+
+  test('a user cannot access their info without a token', async () => {
+    const token = 'invalid token'
+
+    await api
+      .get('/api/users/me')
+      .set('Authorization', 'Bearer ' + token)
       .expect(401)
   })
 })
