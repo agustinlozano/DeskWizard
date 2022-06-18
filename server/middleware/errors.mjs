@@ -15,6 +15,8 @@ const handleErrors = (error, req, res, next) => {
     res.status(401).send({ error: error.message })
   } else if (error.message === 'Please include all fields') {
     res.status(400).send({ error: error.message })
+  } else if (error.message === 'Not authorized') {
+    res.status(401).send({ error: error.message })
   } else {
     res.status(500).end()
   }
