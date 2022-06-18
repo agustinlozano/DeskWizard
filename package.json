@@ -1,5 +1,5 @@
 {
-  "name": "Desk Wizard",
+  "name": "DeskWizard",
   "version": "0.0.1",
   "description": "A MERN app to manage tickets.",
   "main": "index.mjs",
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/agustinlozano/help-desk.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Agustin Lozano Blua",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/agustinlozano/help-desk/issues"
@@ -36,11 +36,5 @@
     "nodemon": "2.0.16",
     "standard": "17.0.0",
     "supertest": "6.2.3"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json",
-    "env": {
-      "jest": true
-    }
   }
 }
