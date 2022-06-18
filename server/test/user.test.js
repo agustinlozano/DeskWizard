@@ -1,4 +1,3 @@
-// import mongoose from 'mongoose'
 import mongoose from 'mongoose'
 import server from '../index.mjs'
 import User from '../models/User.mjs'
