@@ -1,5 +1,6 @@
 import express from 'express'
 import { protect } from '../middleware/authorization.mjs'
+import noteRouter from '../routes/noteRoutes.mjs'
 import {
   getTickets,
   getTicket,
@@ -9,6 +10,9 @@ import {
 } from '../controllers/ticketController.mjs'
 
 const router = express.Router()
+
+// Re-route into note router
+router.use('/:ticketId/notes', noteRouter)
 
 router
   .route('/')
