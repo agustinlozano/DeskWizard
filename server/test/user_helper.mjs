@@ -1,6 +1,6 @@
 import { api } from './helper.mjs'
 
-const getAnUserToken = async () => {
+const getLoggedUserData = async () => {
   const blanquitoUser = {
     username: 'Blanquito',
     name: 'Blanco Saenz Penia',
@@ -19,7 +19,12 @@ const getAnUserToken = async () => {
       password: blanquitoUser.password
     })
 
-  return loggedUser.body.token
+  const { token } = loggedUser.body
+
+  return {
+    token,
+    userData: blanquitoUser
+  }
 }
 
-export default getAnUserToken
+export default getLoggedUserData
