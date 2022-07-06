@@ -1,0 +1,55 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Note",
+  "dateExported": "2022-07-06T14:03:09.302Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "b34fb8d7-b8c1-4f9b-8541-1c140ffd257b",
+      "colId": "189a39e3-4563-42e2-b7bf-fe1d61fe6e75",
+      "containerId": "",
+      "name": "Get all notes",
+      "url": "http://localhost:5000/api/tickets/62a919018d267363608ad407/notes",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2022-07-06T13:14:49.830Z",
+      "modified": "2022-07-06T13:53:40.962Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "91a1688a-48fd-4866-8377-8a71b90541e0",
+      "colId": "189a39e3-4563-42e2-b7bf-fe1d61fe6e75",
+      "containerId": "",
+      "name": "Create a new note",
+      "url": "http://localhost:5000/api/tickets/62a919018d267363608ad407/notes",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2022-07-06T13:14:49.832Z",
+      "modified": "2022-07-06T13:53:08.929Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"text\": \"This is a note about my purchase.\"\n}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": ""
+      },
+      "tests": []
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Ticket",
+  "dateExported": "2022-07-06T14:03:04.223Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "c7a752f0-9fdc-4d11-9c02-73c1bfc82a40",
+      "colId": "92720d18-8d73-4f3d-ad13-99e0677ece58",
+      "containerId": "",
+      "name": "Get all tickets",
+      "url": "http://localhost:5000/api/tickets/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2022-06-14T23:09:33.024Z",
+      "modified": "2022-06-14T23:30:36.425Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTYwM2RmZWViZmFjOTM2ODAyNmEyMCIsImlhdCI6MTY1NTA0NzUyNCwiZXhwIjoxNjU3NjM5NTI0fQ.-aOK4T9DNTCX7Mzs8PuP5ahWM9_1-0XSD1JTlISgkVo"
+      },
+      "tests": []
+    },
+    {
+      "_id": "93fafcc5-4837-44d3-a3e6-867a36405723",
+      "colId": "92720d18-8d73-4f3d-ad13-99e0677ece58",
+      "containerId": "",
+      "name": "Get a single ticket",
+      "url": "http://localhost:5000/api/tickets/62a919018d267363608ad407",
+      "method": "GET",
+      "sortNum": 15000,
+      "created": "2022-06-14T23:28:22.977Z",
+      "modified": "2022-06-14T23:31:09.043Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "3ecd03fe-75f9-4393-bb19-1d6ad1e1b00f",
+      "colId": "92720d18-8d73-4f3d-ad13-99e0677ece58",
+      "containerId": "",
+      "name": "Create a new ticket",
+      "url": "http://localhost:5000/api/tickets/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2022-06-14T23:22:40.883Z",
+      "modified": "2022-06-14T23:25:54.191Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"product\": \"Macbook Pro\",\n  \"description\": \"Getting my new Macbook Pro 14\"\n}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": ""
+      },
+      "tests": []
+    }
+  ]
+}
