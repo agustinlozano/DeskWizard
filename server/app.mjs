@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/users', userRoutes)
-app.use('/api/tickets/', ticketRoutes)
+app.use('/api/tickets', ticketRoutes)
 
 app.use(notFound)
 app.use(handleErrors)
