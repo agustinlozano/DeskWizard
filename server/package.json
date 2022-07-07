@@ -1,0 +1,39 @@
+{
+  "name": "desk-wizard-server",
+  "version": "0.0.3",
+  "description": "A MERN app to manage tickets.",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs",
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules ../node_modules/jest/bin/jest.js",
+    "test:watch": "npm run test -- --watch"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agustinlozano/DeskWizard"
+  },
+  "keywords": [],
+  "author": "Agustin Lozano Blua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agustinlozano/DeskWizard/issues"
+  },
+  "homepage": "https://github.com/agustinlozano/DeskWizard#readme",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "dotenv": "16.0.1",
+    "express": "4.18.1",
+    "express-async-handler": "1.2.0",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "6.3.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "cross-env": "7.0.3",
+    "jest": "28.1.1",
+    "nodemon": "2.0.16",
+    "supertest": "6.2.3"
+  }
+}
