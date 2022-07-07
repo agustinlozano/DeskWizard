@@ -1,40 +1,30 @@
 {
-  "name": "DeskWizard",
-  "version": "0.0.1",
+  "name": "desk-wizard",
+  "private": true,
+  "version": "0.0.3",
   "description": "A MERN app to manage tickets.",
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
   "main": "index.mjs",
   "scripts": {
-    "start": "node server/index.mjs",
-    "dev": "nodemon server/index.mjs",
-    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:watch": "npm run test -- --watch"
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=server",
+    "dev:api": "npm run build && npm run dev --workspace=server"
   },
-  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agustinlozano/help-desk.git"
+    "url": "git+https://github.com/agustinlozano/DeskWizard.git"
   },
   "keywords": [],
   "author": "Agustin Lozano Blua",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/agustinlozano/help-desk/issues"
+    "url": "https://github.com/agustinlozano/DeskWizard/issues"
   },
-  "homepage": "https://github.com/agustinlozano/help-desk#readme",
-  "dependencies": {
-    "bcryptjs": "2.4.3",
-    "dotenv": "16.0.1",
-    "express": "4.18.1",
-    "express-async-handler": "1.2.0",
-    "jsonwebtoken": "8.5.1",
-    "mongoose": "6.3.6"
-  },
+  "homepage": "https://github.com/agustinlozano/DeskWizard#readme",
   "devDependencies": {
-    "@types/jest": "^28.1.1",
-    "cross-env": "7.0.3",
-    "jest": "28.1.1",
-    "nodemon": "2.0.16",
-    "standard": "17.0.0",
-    "supertest": "6.2.3"
+    "standard": "17.0.0"
   }
 }
