@@ -14,11 +14,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(requestLogger)
 
-// Routes
-app.get('/', (req, res) => {
-  res.status(200).send('<h1>Hello, World!</h1>')
-})
+app.use(express.static('../frontend/dist'))
 
+// Routes
 app.use('/api/users', userRoutes)
 app.use('/api/tickets', ticketRoutes)
 
