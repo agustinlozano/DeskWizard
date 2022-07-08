@@ -1,15 +1,30 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import Header from './pages/Header'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Register from './pages/Register'
 import './App.css'
 
 function App () {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>Hello Vite + React!</p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-      </header>
-    </div>
+    <>
+      <Router>
+        <div className='Container'>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+          </Routes>
+        </div>
+      </Router>
+      <ToastContainer />
+    </>
   )
 }
 
