@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
-import Header from './pages/Header'
+import Header from './component/Header'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -14,7 +14,7 @@ function App () {
   return (
     <>
       <Router>
-        <div className='Container'>
+        <div className='container'>
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
