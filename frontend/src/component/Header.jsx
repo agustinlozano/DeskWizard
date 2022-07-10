@@ -1,16 +1,24 @@
 import { FaSignInAlt, FaSignOutAlt, FaTicketAlt, FaUser } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout, reset } from '../features/auth/authSlice'
 
 const Header = () => {
-  const user = false
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { user } = useSelector((state) => state.auth)
 
-  const onLogout = () => {}
+  const onLogout = () => {
+    dispatch(logout())
+    dispatch(reset())
+    navigate('/')
+  }
 
   return (
     <header className='header'>
       <div className='logo'>
         <Link to='/'>
-          Support Desk <FaTicketAlt className='logo-icon' />
+          <span>Desk</span>Wizard <FaTicketAlt className='logo-icon' />
         </Link>
       </div>
 
@@ -26,12 +34,12 @@ const Header = () => {
           : (
             <>
               <li>
-                <Link to='/'>
+                <Link to='/login'>
                   <FaSignInAlt /> Login
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/register'>
                   <FaUser /> Register
                 </Link>
               </li>
