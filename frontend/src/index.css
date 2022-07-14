@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a {
@@ -39,52 +39,26 @@ span {
   font-weight: bold;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 65vh;
+}
+
 .container {
   width: 100%;
   max-width: 960px;
+  max-height: 65vh;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0px 20px 10px 20px;
   text-align: center;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 60px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header ul li {
-  margin-left: 20px;
-}
-
-.header ul li a {
-  display: flex;
-  align-items: center;
-}
-
-.header ul li a:hover {
-  color: #777;
-}
-
-.header ul li a svg {
-  margin-right: 5px;
 }
 
 .heading {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin: 50px auto;
   padding: 0 20px;
 }
 
