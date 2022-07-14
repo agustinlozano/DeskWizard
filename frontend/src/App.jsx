@@ -4,18 +4,19 @@ import {
   Route
 } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
-import Header from './component/Header'
+import Header from './component/Header/'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import './App.css'
+import Footer from './component/Footer/'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App () {
   return (
     <>
       <Router>
+        <Header />
         <div className='container'>
-          <Header />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
@@ -23,6 +24,7 @@ function App () {
           </Routes>
         </div>
       </Router>
+      <Footer />
       <ToastContainer />
     </>
   )
