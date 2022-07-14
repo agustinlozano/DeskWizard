@@ -1,0 +1,29 @@
+.product-card {
+  border:  solid 5px #e9e6e6;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  max-height: 420px;
+  height: 420px;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-info {
+  padding: 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 15px;
+  padding: 5px;
+  border: solid 1px #828282;
+  border-radius: 5px;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.price:hover {
+  transform: scale(0.98);
+}
