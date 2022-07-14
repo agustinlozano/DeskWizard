@@ -6,6 +6,46 @@ import { useDispatch, useSelector } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from '../component/Spinner'
 
+/**
+ * Estado del componente pagina: Register
+ *
+ * Toda la data del formulario se almacena en el objeto 'formData'
+ * que proviene del hook 'useState'. Esta informacion corresponde a:
+ * - username :: String
+ * - name     :: String
+ * - email    :: String
+ * - password :: String
+ *
+ * Por otra parte, en el estado globlal de la aplicacion (auth)
+ * tenemos:
+ *  - user      :: Object
+ *  - isLoading :: Bool
+ *  - isError   :: Bool
+ *  - isSuccess :: Bool
+ *  - massage   :: Bool
+ *
+ * Notamos que la estructura de la informacion del estado local
+ * de nuestro componente (formData) esta compartida en el campo
+ * 'user' del estado global.
+ *
+ * Otra cosa a destacar es que en este caso el codigo parece ser
+ * totalmente sincrono, ya que todo la logica asincrona esta en
+ * el slice 'auth' de nuestro estado global.
+ *
+ * la cual es seleccionada en este bloque de codigo:
+ *
+ *    const { user, isLoading, isError, isSuccess, message } = useSelector(
+ *      (state) => state.auth
+ *    )
+ *
+ * La funcion onChange es la que actualiza el estado local de la
+ * app a traves del input del formulario.
+ *
+ * La funcion onSubmit es la que manda el formulario y suministra
+ * la informacion del usuario desde el estado local del componente
+ * al estado globlal de la app.
+ */
+
 const Register = () => {
   const [formData, setFormData] = useState({
     name: '',
