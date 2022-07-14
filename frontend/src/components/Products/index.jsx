@@ -26,7 +26,7 @@ const Products = () => {
   return (
     <div className='product-list'>
       <section className='heading'>
-        <h2>These are the pricing for our products</h2>
+        <h2>This is the pricing for our products</h2>
         <p>Choose the plan that best suits you!</p>
       </section>
 
