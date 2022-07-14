@@ -9,11 +9,12 @@
 body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
+  color: #01161e; 
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #01161e;
 }
 
 p {
@@ -43,7 +44,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 65vh;
+  height: 63vh;
 }
 
 .container {
@@ -69,9 +70,9 @@ main {
 /* btn styling */
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid #01161e;
   border-radius: 5px;
-  background: #000;
+  background: #01161e;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -89,7 +90,7 @@ main {
 
 .btn-reverse {
   background: #fff;
-  color: #000;
+  color: #01161e;
 }
 
 .btn-block {
@@ -161,7 +162,7 @@ main {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #000 transparent #555 transparent;
+  border-color: #01161e transparent #555 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
