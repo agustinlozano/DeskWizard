@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
-import Spinner from '../component/Spinner'
+import Spinner from '../components/Spinner'
 
 /**
  * Estado del componente pagina: Register
