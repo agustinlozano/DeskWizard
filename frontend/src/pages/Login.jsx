@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
-import Spinner from '../component/Spinner'
+import Spinner from '../components/Spinner'
 
 const Login = () => {
   const [formData, setFormData] = useState({

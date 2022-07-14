@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FaQuestionCircle, FaTicketAlt } from 'react-icons/fa'
-import Products from '../component/Products'
+import Products from '../components/Products'
 
 const Home = () => {
   return (
