@@ -1,0 +1,11 @@
+.pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-list {
+  height: 100vh;
+  /* margin-top: 10px; */
+}
