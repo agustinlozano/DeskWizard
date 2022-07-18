@@ -1,7 +1,46 @@
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { createTicket, reset } from '../features/tickets/ticketSlice'
 import BackButton from '../components/BackButton'
+import Spinner from '../components/Spinner'
 
 const NewTicket = () => {
-  const onSubmit = () => {}
+  const { user } = useSelector((state) => state.auth)
+  const { isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.tickets
+  )
+
+  const [name, setName] = useState(user.name)
+  const [email, setEmail] = useState(user.email)
+  const [product, setProduct] = useState('')
+  const [description, setDescription] = useState('')
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message)
+    }
+
+    if (isSuccess) {
+      dispatch(reset())
+      navigate('/tickets')
+    }
+
+    dispatch(reset())
+  }, [dispatch, isError, isSuccess, navigate, message])
+
+  const onSubmit = (event) => {
+    event.preventDefault()
+    dispatch(createTicket({ product, description }))
+  }
+
+  if (isLoading) {
+    return <Spinner />
+  }
 
   return (
     <>
@@ -14,11 +53,11 @@ const NewTicket = () => {
       <section className='form new-ticket-from'>
         <div className='form-group'>
           <label htmlFor='name'>Customer Name</label>
-          <input type='text' className='form-control' value='aClientName' disabled />
+          <input type='text' className='form-control' value={name} disabled />
         </div>
         <div className='form-group'>
           <label htmlFor='email'>Customer Email</label>
-          <input type='text' className='form-control' value='aClientEmail' disabled />
+          <input type='text' className='form-control' value={email} disabled />
         </div>
         <form onSubmit={onSubmit}>
           <div className='form-group'>
@@ -26,8 +65,8 @@ const NewTicket = () => {
             <select
               name='product'
               id='product'
-              value='product'
-              onChange={(e) => {}}
+              value={product}
+              onChange={(e) => setProduct(e.target.value)}
             >
               <option value='iPhone'>iPhone</option>
               <option value='Macbook Pro'>Macbook Pro</option>
@@ -43,8 +82,8 @@ const NewTicket = () => {
               id='description'
               className='form-control'
               placeholder='Description'
-              value='A description of the product.'
-              onChange={(e) => {}}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             />
           </div>
           <div className='form-group'>
