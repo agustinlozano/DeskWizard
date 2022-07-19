@@ -1,7 +1,7 @@
 {
   "name": "desk-wizard",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A MERN app to manage tickets.",
   "workspaces": [
     "frontend",
