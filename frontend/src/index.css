@@ -44,7 +44,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 65vh;
+  height: 63vh;
 }
 
 .container {
@@ -120,7 +120,7 @@ main {
 /* form styling */
 .form {
   width: 70%;
-  margin: 0 auto;
+  margin: 0 auto 70px auto;
 }
 
 .form-group {
