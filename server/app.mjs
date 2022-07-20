@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(requestLogger)
 
-app.use(express.static('../frontend/dist'))
+app.use(express.static('./dist'))
 
 // Routes
 app.use('/api/users', userRoutes)
