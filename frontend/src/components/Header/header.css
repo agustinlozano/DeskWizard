@@ -36,3 +36,36 @@
 .header ul li a svg {
   margin-right: 5px;
 }
+
+/* logo styling */
+.logo {
+  font-size: 1.2rem;
+}
+
+.logo-icon {
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding: 1.5rem 0;
+  }
+
+  .header ul li {
+    margin-left: 5px;
+  }
+
+  .header ul {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+}

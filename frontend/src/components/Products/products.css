@@ -3,9 +3,27 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 70px;
 }
 
 .product-list {
   height: 100vh;
-  /* margin-top: 10px; */
+}
+
+@media (max-width: 900px) {
+  .pricing {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .pricing {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
 }

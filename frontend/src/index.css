@@ -50,7 +50,7 @@ main {
 .container {
   width: 100%;
   max-width: 960px;
-  max-height: 100vh;
+  min-height: 70vh;
   margin: 0 auto;
   padding: 0px 20px 10px 20px;
   text-align: center;
@@ -176,21 +176,11 @@ main {
   }
 }
 
-/* logo styling */
-.logo {
-  font-size: 1.2rem;
-}
-
-.logo-icon {
-  height: 0.9rem;
-  width: 0.9rem;
-}
-
 /* Ticket/s styling */
 
 /* New Ticket Page*/
 .new-ticket-from {
-  margin-bottom: 220px;
+  margin-bottom: 70px;
 }
 
 /* Tickets Page */ 
@@ -212,6 +202,11 @@ main {
 .ticket-page {
   position: relative;
   text-align: left;
+  margin-bottom: 70px;
+}
+
+.ticket-list {
+  margin-bottom: 70px;
 }
 
 .status {
@@ -327,3 +322,21 @@ main {
   margin-top: 30px;
 }
 
+@media (max-width: 600px) {
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .ticket-created h2,
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+}

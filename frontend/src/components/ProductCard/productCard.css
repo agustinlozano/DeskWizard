@@ -2,14 +2,20 @@
   border:  solid 5px #e9e6e6;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
-  max-height: 420px;
-  height: 420px;
+  min-height: 420px;
+  /* height: 420px; */
+  width: 100%;
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .product-info {
   padding: 10px;
+}
+
+.product-card img {
+  width: 250px;
+  height: 210px;
 }
 
 .price {
@@ -26,4 +32,18 @@
 
 .price:hover {
   transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .product-card img {
+    width: 100%;
+    object-fit: scale-down;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-card img {
+    width: 100%;
+    object-fit: scale-down;
+  }
 }
