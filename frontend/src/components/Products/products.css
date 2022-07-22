@@ -7,7 +7,7 @@
 }
 
 .product-list {
-  height: 100vh;
+  height: 95vh;
 }
 
 @media (max-width: 900px) {
