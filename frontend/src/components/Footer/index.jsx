@@ -1,20 +1,23 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { SiGmail } from 'react-icons/si'
 import './footer.css'
+import './animation.css'
 
 const Footer = () => {
   return (
     <div className='footer'>
-      <div className='developer'>
-        <p>Developed by
-          <a
-            href='https://www.linkedin.com/in/agustin-lozano-blua/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <span>&nbsp;Agustin Lozano</span>
-          </a>
-        </p>
+      <div className='developer efect'>
+        <a
+          href='https://www.linkedin.com/in/agustin-lozano-blua/'
+          target='_blank'
+          rel='noreferrer'
+        >
+          Developed by<span>&nbsp;Agustin Lozano</span>
+          <span class='border border-top' />
+          <span class='border border-right' />
+          <span class='border border-bottom' />
+          <span class='border border-left' />
+        </a>
       </div>
       <ul className='social-media'>
         <li>
