@@ -1,0 +1,15 @@
+.note {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.note-date {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 14px;
+}
