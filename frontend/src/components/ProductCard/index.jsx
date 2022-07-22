@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BiPurchaseTag } from 'react-icons/bi'
+import { BiPurchaseTag } from 'react-icons/Bi'
 import './productCard.css'
 
 const ProductCart = ({ name, path, value, description }) => {
@@ -8,8 +8,6 @@ const ProductCart = ({ name, path, value, description }) => {
       <Link to='/'>
         <img
           src={path}
-          width='250'
-          height='210'
         />
       </Link>
       <div className='product-info'>
