@@ -44,7 +44,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 60vh;
+  height: 63vh;
 }
 
 .container {
@@ -99,8 +99,10 @@ main {
 }
 
 .btn-sm {
-  padding: 5px 15px;
+  padding: 5px 10px;
   font-size: 13px;
+  width: 70%;
+  margin: auto;
 }
 
 .btn-danger {
@@ -144,29 +146,6 @@ main {
   margin: 0 0 5px 3px;
 }
 
-/* Spinner styling */
-.loadingSpinnerContainer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loadingSpinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
-  border-color: #01161e transparent #555 transparent;
-  border-radius: 50%;
-  animation: spin 1.2s linear infinite;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -198,7 +177,7 @@ main {
   text-align: center;
 }
 
-/* TicketPage */
+/* Ticket Page */
 .ticket-page {
   position: relative;
   text-align: left;
@@ -238,15 +217,6 @@ main {
   border-radius: 10px;
 }
 
-.ticket-desc {
-  margin: 20px 0;
-  font-size: 17px;
-  background-color: #f4f4f4;
-  border: 1px #ccc solid;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-
 .btn-close {
   background: none;
   border: none;
@@ -279,11 +249,6 @@ main {
   margin: 0 0 5px 3px;
 }
 
-
-
-
-
-
 .ticket-created {
   border: 1px solid #e6e6e6;
   border-radius: 5px;
@@ -303,14 +268,15 @@ main {
   font-size: 1.3rem;
 }
 
-.ticket-info {
-  font-size: 1.3rem;
-}
-
 .ticket-page h2 {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.ticket-page h3 {
+  font-size: 1rem;
 }
 
 .ticket-page .btn {
@@ -338,5 +304,10 @@ main {
 
   .heading p {
     font-size: 1.5rem;
+  }
+
+  .ticket {
+    padding: 10px 5px;
+    gap: 10px;
   }
 }
