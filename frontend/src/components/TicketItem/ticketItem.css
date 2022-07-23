@@ -10,3 +10,9 @@
   border-radius: 5px;
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .ticket {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
