@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import BackButton from '../BackButton'
+import './ticketDesc.css'
 
 const TicketDesc = ({ ticket }) => {
   const { notes } = useSelector(
@@ -7,18 +8,21 @@ const TicketDesc = ({ ticket }) => {
   )
 
   return (
-    <header>
+    <header className='ticket-info'>
       <BackButton url='/tickets' />
       <h2>
-        Ticket ID: {ticket._id}
+        Ticket ID: <small className='ticket-data'>{ticket._id}</small>
         <span className={`status status-${ticket.status}`}>
           {ticket.status}
         </span>
       </h2>
       <h3>
-        Date Submitted: {new Date(ticket.createdAt).toLocaleString('en-US')}
+        Date Submitted:
+        <small className='ticket-data'>&nbsp;{new Date(ticket.createdAt).toLocaleString('en-US')}</small>
       </h3>
-      <h3>Product: {ticket.product}</h3>
+      <h3>Product:
+        <small className='ticket-data'>&nbsp;{ticket.product}</small>
+      </h3>
       <hr />
       <div className='ticket-desc'>
         <h3>Description of Issue</h3>

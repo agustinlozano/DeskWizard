@@ -1,0 +1,17 @@
+.ticket-desc {
+  margin: 20px 0;
+  font-size: 17px;
+  background-color: #f4f4f4;
+  border: 1px #ccc solid;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.ticket-info {
+  font-size: 1.3rem;
+}
+
+.ticket-data {
+  color: rgb(106, 106, 106);
+  font-weight: bold;
+}
