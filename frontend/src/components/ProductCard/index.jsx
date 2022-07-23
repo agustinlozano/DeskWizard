@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BiPurchaseTag } from 'react-icons/Bi'
+import { BiPurchaseTag } from 'react-icons/bi'
 import './productCard.css'
 
 const ProductCart = ({ name, path, value, description }) => {
