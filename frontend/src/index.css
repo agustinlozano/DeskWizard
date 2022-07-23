@@ -44,7 +44,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 62vh;
+  height: 60vh;
 }
 
 .container {
