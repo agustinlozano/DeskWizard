@@ -13,9 +13,9 @@
   "main": "index.mjs",
   "scripts": {
     "build": "npm run build --workspace=frontend",
-    "start:app": "npm run dev --workspace=frontend",
     "start": "npm run start --workspace=server",
     "deploy": "npm run build && npm run start",
+    "dev:app": "npm run dev --workspace=frontend",
     "dev:server": "npm run build && npm run dev --workspace=server"
   },
   "repository": {
