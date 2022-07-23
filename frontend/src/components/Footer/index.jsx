@@ -13,10 +13,10 @@ const Footer = () => {
           rel='noreferrer'
         >
           Developed by<span>&nbsp;Agustin Lozano</span>
-          <span class='border border-top' />
-          <span class='border border-right' />
-          <span class='border border-bottom' />
-          <span class='border border-left' />
+          <span className='border border-top' />
+          <span className='border border-right' />
+          <span className='border border-bottom' />
+          <span className='border border-left' />
         </a>
       </div>
       <ul className='social-media'>
