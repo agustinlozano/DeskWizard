@@ -14,8 +14,10 @@ const NewTicket = () => {
 
   const [name, setName] = useState(user.name)
   const [email, setEmail] = useState(user.email)
-  const [product, setProduct] = useState('')
+  const [product, setProduct] = useState('iPhone')
   const [description, setDescription] = useState('')
+
+  console.log({ product })
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -53,11 +55,21 @@ const NewTicket = () => {
       <section className='form new-ticket-from'>
         <div className='form-group'>
           <label htmlFor='name'>Customer Name</label>
-          <input type='text' className='form-control' value={name} disabled />
+          <input
+            type='text'
+            className='form-control'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
         <div className='form-group'>
           <label htmlFor='email'>Customer Email</label>
-          <input type='text' className='form-control' value={email} disabled />
+          <input
+            type='text'
+            className='form-control'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <form onSubmit={onSubmit}>
           <div className='form-group'>
