@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
+import FormField from '../components/FormField'
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -67,36 +68,22 @@ const Login = () => {
 
       <section className='form'>
         <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <label htmlFor='email'>
-              <span>Email</span>
-            </label>
-            <input
-              type='email'
-              className='form-control'
-              id='email'
-              name='email'
-              value={email}
-              onChange={onChange}
-              placeholder='Enter your email'
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <label htmlFor='password'>
-              <span>Password</span>
-            </label>
-            <input
-              type='password'
-              className='form-control'
-              id='password'
-              name='password'
-              value={password}
-              onChange={onChange}
-              placeholder='Enter password'
-              required
-            />
-          </div>
+          <FormField
+            type='email'
+            name='email'
+            data={email}
+            label='Email'
+            handleField={onChange}
+            message='Enter your email'
+          />
+          <FormField
+            type='password'
+            name='password'
+            data={password}
+            label='Password'
+            handleField={onChange}
+            message='Enter your email'
+          />
           <div className='form-group'>
             <button className='btn btn-block'>Submit</button>
           </div>
