@@ -3,7 +3,8 @@ import connectDB from './config/db.mjs'
 import userRoutes from './routes/userRouter.mjs'
 import ticketRoutes from './routes/ticketRouter.mjs'
 import requestLogger from './middleware/requestLogger.mjs'
-import { handleErrors, notFound } from './middleware/errors.mjs'
+import notFound from './middleware/notFound.mjs'
+import handleErrors from './middleware/errors.mjs'
 
 // Connect to database
 connectDB()
