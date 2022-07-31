@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
+import FormField from '../components/FormField'
 import Spinner from '../components/Spinner'
 
 /**
@@ -50,11 +51,12 @@ const Register = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    username: '',
     password: '',
     password2: ''
   })
 
-  const { name, email, password, password2 } = formData
+  const { email, name, username, password, password2 } = formData
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -76,7 +78,7 @@ const Register = () => {
     dispatch(reset())
   }, [isError, isSuccess, user, message, navigate, dispatch])
 
-  // as we fill in the form fields, the status is updated
+  // As we fill in the form fields, the status is updated
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -93,6 +95,7 @@ const Register = () => {
       const userData = {
         name,
         email,
+        username,
         password
       }
 
@@ -115,51 +118,38 @@ const Register = () => {
 
       <section className='form'>
         <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <label htmlFor='name'>
-              <span>Name</span>
-            </label>
-            <input
-              type='text'
-              className='form-control'
-              id='name'
-              name='name'
-              value={name}
-              onChange={onChange}
-              placeholder='Enter your name'
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <label htmlFor='email'>
-              <span>Email</span>
-            </label>
-            <input
-              type='email'
-              className='form-control'
-              id='email'
-              name='email'
-              value={email}
-              onChange={onChange}
-              placeholder='Enter your email'
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <label htmlFor='password'>
-              <span>Password</span>
-            </label>
-            <input
-              type='password'
-              className='form-control'
-              id='password'
-              name='password'
-              value={password}
-              onChange={onChange}
-              placeholder='Enter password'
-              required
-            />
-          </div>
+          <FormField
+            type='email'
+            name='email'
+            data={email}
+            label='Email'
+            handleField={onChange}
+            message='Enter your email'
+          />
+          <FormField
+            type='text'
+            name='name'
+            data={name}
+            label='Name'
+            handleField={onChange}
+            message='Enter your name'
+          />
+          <FormField
+            type='text'
+            name='username'
+            data={username}
+            label='Username'
+            handleField={onChange}
+            message='Enter your username'
+          />
+          <FormField
+            type='password'
+            name='password'
+            data={password}
+            label='Password'
+            handleField={onChange}
+            message='Enter your password'
+          />
           <div className='form-group'>
             <input
               type='password'
