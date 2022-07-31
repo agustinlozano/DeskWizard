@@ -22,8 +22,4 @@ const handleErrors = (error, req, res, next) => {
   }
 }
 
-const notFound = (req, res, next) => {
-  res.status(404).send({ error: 'unknown endpoint' })
-}
-
-export { handleErrors, notFound }
+export default handleErrors
