@@ -75,6 +75,7 @@ const Login = () => {
             label='Email'
             handleField={onChange}
             message='Enter your email'
+            autocomplete='on'
           />
           <FormField
             type='password'
@@ -83,6 +84,7 @@ const Login = () => {
             label='Password'
             handleField={onChange}
             message='Enter your email'
+            autocomplete='on'
           />
           <div className='form-group'>
             <button className='btn btn-block'>Submit</button>

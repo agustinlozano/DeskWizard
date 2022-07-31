@@ -1,4 +1,4 @@
-const FormField = ({ type, name, data, label, handleField, message }) => {
+const FormField = ({ type, name, data, label, handleField, message, autocomplete = 'off' }) => {
   return (
     <div className='form-group'>
       <label htmlFor={type}>
@@ -12,6 +12,7 @@ const FormField = ({ type, name, data, label, handleField, message }) => {
         onChange={handleField}
         placeholder={message}
         required
+        autoComplete={autocomplete}
       />
     </div>
   )
