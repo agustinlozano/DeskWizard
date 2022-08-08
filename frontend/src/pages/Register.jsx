@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
 import FormField from '../components/FormField'
 import Spinner from '../components/Spinner'
+
+const linkStyle = {
+  color: '#01161e',
+  fontWeight: 'bold',
+  textDecoration: 'underline'
+}
 
 /**
  * Estado del componente pagina: Register
@@ -162,6 +168,7 @@ const Register = () => {
               required
             />
           </div>
+          <p>Do you already have an account? <Link style={linkStyle} to='/login'>Login here!</Link></p>
           <div className='form-group'>
             <button className='btn btn-block'>Submit</button>
           </div>
