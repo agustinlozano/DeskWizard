@@ -1,18 +1,18 @@
-name: Deploy
+# name: Deploy
 
-on:
-  push:
-    branches:
-      - master
+# on:
+#   push:
+#     branches:
+#       - master
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "damp-ravine-12093"
-          heroku_email: "agustinn.lozanoo33@gmail.com"
-          procfile: "web: npm run deploy"
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: akhileshns/heroku-deploy@v3.12.12
+#         with:
+#           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+#           heroku_app_name: "damp-ravine-12093"
+#           heroku_email: "agustinn.lozanoo33@gmail.com"
+#           procfile: "web: npm run deploy"
