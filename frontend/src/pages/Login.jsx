@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react'
 import { FaSignInAlt } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import FormField from '../components/FormField'
+
+const linkStyle = {
+  color: '#01161e',
+  fontWeight: 'bold',
+  textDecoration: 'underline'
+}
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -86,6 +92,7 @@ const Login = () => {
             message='Enter your email'
             autocomplete='on'
           />
+          <p>You still do not have an account? <Link style={linkStyle} to='/register'>sign up here!</Link></p>
           <div className='form-group'>
             <button className='btn btn-block'>Submit</button>
           </div>
